@@ -6,7 +6,7 @@ var currentGuess = '';
 var currentWord = '';
 var currentWordArr = [];
 var wrongLetArr = [];
-var noRepeatArr = [0];
+var noRepeatArr = [];
 var numBlanks = 0;
 
 //game countersss
@@ -20,17 +20,17 @@ function startGame() {
 	guessLeft = 9;
 	currentWordArr = [];
 	wrongLetArr = [];
-	noRepeatArr = [0];
+	noRepeatArr = [];
 
 	//generate new random word
 	currentWord = randomWord();
-	console.log(currentWord);
+	//console.log(currentWord);
 
 	//populate current words with right number of blanks
 	currentWord.forEach(function (let) {
 		currentWordArr.push('_')
 	});
-	console.log(currentWordArr);
+	//console.log(currentWordArr);
 
 	//update HTML with jQuery
 	$(document).ready(function () {
@@ -62,7 +62,7 @@ function checkLet(let) {
 				$('#wordToGuess').text(currentWordArr.join(' '));
 			}
 		}
-		console.log(currentWordArr)
+		//console.log(currentWordArr)
 	} else { //wrong guess below pushed to array and guesses left decreases by 1
 		wrongLetArr.push(let);
 		$('#lettersGuessed').text(wrongLetArr.join(' '));
@@ -103,7 +103,7 @@ function playGame() {
 	$(document).keypress(function (e) {
 		currentGuess = String.fromCharCode(e.which);
 		if (currentGuess.match(/[a-zA-Z]/)) {
-			console.log(currentGuess);
+			//console.log(currentGuess);
 			//loop to determine if the letter is already guessed
 			if (noRepeatArr.indexOf(currentGuess) == -1) {
 				//if the letter is not guessed, then push into the noRepeat array and continue game
