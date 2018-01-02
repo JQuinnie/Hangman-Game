@@ -1,0 +1,19 @@
+body {
+  background-image: url('../images/index-bg.png');
+}
+.jumbotron {
+  background-color: #2a3b13;
+  color: #99cc33;
+}
+#divwtg, #divlg {
+  background-color: #99cc33;
+  color: #323e11;
+}
+.card-header {
+  background-color: #2a3b13;
+  color: #99cc33;
+}
+.card {
+  background-color: #2a3b13;
+  color: #99cc33;
+}
