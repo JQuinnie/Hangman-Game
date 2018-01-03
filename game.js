@@ -128,3 +128,6 @@ startGame();
 
 //lets play the game
 playGame();
+
+
+// future improvements to game, make game responsive on phone. Add jQuery to capture 'on' events for alphabet buttons, which will allow users to play on their touch device.
